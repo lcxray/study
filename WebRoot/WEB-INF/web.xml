@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Java Servlet Programming Dynamic</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+       <!--servlet-name 标签中的名字可以任意取，但是不能有重复的-->
+      <servlet-name>JavaServletProgramming</servlet-name>
+
+      <!--servlet- class标签中的内容不能任意取，只能是包名+java程序名-->
+      <servlet-class>ch02.HelloWorld</servlet-class>
+  </servlet>
+    
+    <servlet-mapping>
+        <!--此处servlet-name标签中的名字要与上面servlet-name标签中的相同-->
+        <servlet-name>JavaServletProgramming</servlet-name>
+        <!-- url-pattern标签中/后面的内容可以任意取-->
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+    
+
+
+  <servlet>
+      <servlet-name>JavaServletProgramming2</servlet-name>
+      <servlet-class>ch02.Hello2</servlet-class>
+  </servlet>    
+   <servlet-mapping>
+        <servlet-name>JavaServletProgramming2</servlet-name>
+        <url-pattern>/Hello2</url-pattern>
+   </servlet-mapping>
+    
+  <servlet>
+      <servlet-name>counter</servlet-name>
+      <servlet-class>ch03.SimpleCounter</servlet-class>
+  </servlet>    
+   <servlet-mapping>
+        <servlet-name>counter</servlet-name>
+        <url-pattern>/SimpleCounter</url-pattern>
+   </servlet-mapping>
+        
+</web-app>
